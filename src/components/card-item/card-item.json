@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_card_item_card_items",
+  "info": {
+    "displayName": "CardItem",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

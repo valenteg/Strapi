@@ -1023,6 +1023,39 @@ export interface ApiHomeHome extends Schema.CollectionType {
   };
 }
 
+export interface ApiHomePageHomePage extends Schema.CollectionType {
+  collectionName: 'home_pages';
+  info: {
+    singularName: 'home-page';
+    pluralName: 'home-pages';
+    displayName: 'HomePage';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    banner: Attribute.Media;
+    NavigationCards: Attribute.Component<'card-item.card-item', true>;
+    Contact: Attribute.Component<'contact-section.contact'>;
+    HomeCallToAction: Attribute.Component<'call-to-action-section.home-call-to-action'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-page.home-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-page.home-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1044,6 +1077,7 @@ declare module '@strapi/types' {
       'api::course.course': ApiCourseCourse;
       'api::design-item.design-item': ApiDesignItemDesignItem;
       'api::home.home': ApiHomeHome;
+      'api::home-page.home-page': ApiHomePageHomePage;
     }
   }
 }

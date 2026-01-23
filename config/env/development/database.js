@@ -1,8 +1,10 @@
 module.exports = ({ env }) => ({
     connection: {
+        client: env('DATABASE_CLIENT', 'sqlite'),
         connection: {
-            connectionString: env('DATABASE_URL')
-        }
+            filename: env('DATABASE_FILENAME', '.tmp/data.db'),
+        },
+        useNullAsDefault: true,
     }
 });
 

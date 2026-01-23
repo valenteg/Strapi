@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_contact_section_contacts",
+  "info": {
+    "displayName": "Contact",
+    "icon": "earth"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "ContactInfo": {
+      "displayName": "ContactInfo",
+      "type": "component",
+      "repeatable": false,
+      "component": "contact-info.contact-info"
+    }
+  }
+}
