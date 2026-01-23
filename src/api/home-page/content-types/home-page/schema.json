@@ -4,23 +4,14 @@
   "info": {
     "singularName": "home-page",
     "pluralName": "home-pages",
-    "displayName": "HomePage"
+    "displayName": "HomePage",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "banner": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
-    },
     "NavigationCards": {
       "displayName": "CardItem",
       "type": "component",
@@ -38,6 +29,12 @@
       "type": "component",
       "repeatable": false,
       "component": "call-to-action-section.home-call-to-action"
+    },
+    "HomeMainBanner": {
+      "displayName": "MainBanner",
+      "type": "component",
+      "repeatable": false,
+      "component": "main-banner.main-banner"
     }
   }
 }

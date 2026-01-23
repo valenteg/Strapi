@@ -1029,15 +1029,16 @@ export interface ApiHomePageHomePage extends Schema.CollectionType {
     singularName: 'home-page';
     pluralName: 'home-pages';
     displayName: 'HomePage';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    banner: Attribute.Media;
     NavigationCards: Attribute.Component<'card-item.card-item', true>;
     Contact: Attribute.Component<'contact-section.contact'>;
     HomeCallToAction: Attribute.Component<'call-to-action-section.home-call-to-action'>;
+    HomeMainBanner: Attribute.Component<'main-banner.main-banner'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

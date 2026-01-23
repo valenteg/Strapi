@@ -32,6 +32,7 @@ export interface ContactInfoContactInfo extends Schema.Component {
   info: {
     displayName: 'ContactInfo';
     icon: 'phone';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
@@ -42,6 +43,8 @@ export interface ContactInfoContactInfo extends Schema.Component {
     phone: Attribute.String;
     email: Attribute.String;
     instagram: Attribute.String;
+    city: Attribute.String;
+    state: Attribute.String;
   };
 }
 
@@ -57,6 +60,18 @@ export interface ContactSectionContact extends Schema.Component {
   };
 }
 
+export interface MainBannerMainBanner extends Schema.Component {
+  collectionName: 'components_main_banner_main_banners';
+  info: {
+    displayName: 'MainBanner';
+  };
+  attributes: {
+    image: Attribute.Media;
+    title: Attribute.RichText;
+    callToAction: Attribute.String;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -64,6 +79,7 @@ declare module '@strapi/types' {
       'card-item.card-item': CardItemCardItem;
       'contact-info.contact-info': ContactInfoContactInfo;
       'contact-section.contact': ContactSectionContact;
+      'main-banner.main-banner': MainBannerMainBanner;
     }
   }
 }
