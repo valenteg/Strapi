@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "course_pages",
+  "info": {
+    "singularName": "course-page",
+    "pluralName": "course-pages",
+    "displayName": "CoursePage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FirstSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section-item.section-item"
+    },
+    "SecondSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section-item.section-item"
+    },
+    "ThirdSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section-item.section-item"
+    },
+    "SkillCard": {
+      "displayName": "SkillCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "skill-card.skill-card"
+    },
+    "SkillTitle": {
+      "type": "string"
+    }
+  }
+}

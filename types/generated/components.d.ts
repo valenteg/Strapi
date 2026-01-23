@@ -60,6 +60,17 @@ export interface ContactSectionContact extends Schema.Component {
   };
 }
 
+export interface LinkLink extends Schema.Component {
+  collectionName: 'components_link_links';
+  info: {
+    displayName: 'link';
+  };
+  attributes: {
+    title: Attribute.String;
+    src: Attribute.String;
+  };
+}
+
 export interface MainBannerMainBanner extends Schema.Component {
   collectionName: 'components_main_banner_main_banners';
   info: {
@@ -72,6 +83,32 @@ export interface MainBannerMainBanner extends Schema.Component {
   };
 }
 
+export interface SectionItemSectionItem extends Schema.Component {
+  collectionName: 'components_section_item_section_items';
+  info: {
+    displayName: 'SectionItem';
+    icon: 'expand';
+  };
+  attributes: {
+    image: Attribute.Media;
+    title: Attribute.String;
+    description: Attribute.Text;
+    Link: Attribute.Component<'link.link'>;
+  };
+}
+
+export interface SkillCardSkillCard extends Schema.Component {
+  collectionName: 'components_skill_card_skill_cards';
+  info: {
+    displayName: 'SkillCard';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    image: Attribute.Media;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -79,7 +116,10 @@ declare module '@strapi/types' {
       'card-item.card-item': CardItemCardItem;
       'contact-info.contact-info': ContactInfoContactInfo;
       'contact-section.contact': ContactSectionContact;
+      'link.link': LinkLink;
       'main-banner.main-banner': MainBannerMainBanner;
+      'section-item.section-item': SectionItemSectionItem;
+      'skill-card.skill-card': SkillCardSkillCard;
     }
   }
 }
