@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_pages",
+  "info": {
+    "singularName": "about-page",
+    "pluralName": "about-pages",
+    "displayName": "AboutPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FirstSection": {
+      "displayName": "SectionItem",
+      "type": "component",
+      "repeatable": false,
+      "component": "section-item.section-item"
+    },
+    "SecondSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section-item.section-item"
+    },
+    "ThirdSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section-item.section-item"
+    },
+    "FourthSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section-item.section-item"
+    },
+    "AboutSeparator": {
+      "type": "component",
+      "repeatable": false,
+      "component": "call-to-action-section.home-call-to-action"
+    }
+  }
+}

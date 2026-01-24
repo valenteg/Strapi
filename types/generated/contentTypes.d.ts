@@ -742,6 +742,41 @@ export interface ApiAboutAbout extends Schema.CollectionType {
   };
 }
 
+export interface ApiAboutPageAboutPage extends Schema.CollectionType {
+  collectionName: 'about_pages';
+  info: {
+    singularName: 'about-page';
+    pluralName: 'about-pages';
+    displayName: 'AboutPage';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    FirstSection: Attribute.Component<'section-item.section-item'>;
+    SecondSection: Attribute.Component<'section-item.section-item'>;
+    ThirdSection: Attribute.Component<'section-item.section-item'>;
+    FourthSection: Attribute.Component<'section-item.section-item'>;
+    AboutSeparator: Attribute.Component<'call-to-action-section.home-call-to-action'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::about-page.about-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::about-page.about-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiArchiItemArchiItem extends Schema.CollectionType {
   collectionName: 'archi_items';
   info: {
@@ -820,6 +855,38 @@ export interface ApiArchiItemArchiItem extends Schema.CollectionType {
   };
 }
 
+export interface ApiContactPageContactPage extends Schema.CollectionType {
+  collectionName: 'contact_pages';
+  info: {
+    singularName: 'contact-page';
+    pluralName: 'contact-pages';
+    displayName: 'ContactPage';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    ContactInfo: Attribute.Component<'contact-info.contact-info'>;
+    ExtraText: Attribute.Text;
+    image: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contact-page.contact-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::contact-page.contact-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCourseCourse extends Schema.CollectionType {
   collectionName: 'courses';
   info: {
@@ -846,6 +913,40 @@ export interface ApiCourseCourse extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::course.course',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCoursePageCoursePage extends Schema.CollectionType {
+  collectionName: 'course_pages';
+  info: {
+    singularName: 'course-page';
+    pluralName: 'course-pages';
+    displayName: 'CoursePage';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    FirstSection: Attribute.Component<'section-item.section-item'>;
+    SecondSection: Attribute.Component<'section-item.section-item'>;
+    ThirdSection: Attribute.Component<'section-item.section-item'>;
+    SkillCard: Attribute.Component<'skill-card.skill-card', true>;
+    SkillTitle: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::course-page.course-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::course-page.course-page',
       'oneToOne',
       'admin::user'
     > &
@@ -1023,6 +1124,40 @@ export interface ApiHomeHome extends Schema.CollectionType {
   };
 }
 
+export interface ApiHomePageHomePage extends Schema.CollectionType {
+  collectionName: 'home_pages';
+  info: {
+    singularName: 'home-page';
+    pluralName: 'home-pages';
+    displayName: 'HomePage';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    NavigationCards: Attribute.Component<'card-item.card-item', true>;
+    Contact: Attribute.Component<'contact-section.contact'>;
+    HomeCallToAction: Attribute.Component<'call-to-action-section.home-call-to-action'>;
+    HomeMainBanner: Attribute.Component<'main-banner.main-banner'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-page.home-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-page.home-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1040,10 +1175,14 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
       'api::about.about': ApiAboutAbout;
+      'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::archi-item.archi-item': ApiArchiItemArchiItem;
+      'api::contact-page.contact-page': ApiContactPageContactPage;
       'api::course.course': ApiCourseCourse;
+      'api::course-page.course-page': ApiCoursePageCoursePage;
       'api::design-item.design-item': ApiDesignItemDesignItem;
       'api::home.home': ApiHomeHome;
+      'api::home-page.home-page': ApiHomePageHomePage;
     }
   }
 }

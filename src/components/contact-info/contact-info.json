@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_contact_info_contact_infos",
+  "info": {
+    "displayName": "ContactInfo",
+    "icon": "phone",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "street": {
+      "type": "string"
+    },
+    "number": {
+      "type": "string"
+    },
+    "neighborhood": {
+      "type": "string"
+    },
+    "cep": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    }
+  }
+}

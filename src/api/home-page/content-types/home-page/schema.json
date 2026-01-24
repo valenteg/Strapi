@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "HomePage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "NavigationCards": {
+      "displayName": "CardItem",
+      "type": "component",
+      "repeatable": true,
+      "component": "card-item.card-item"
+    },
+    "Contact": {
+      "displayName": "Contact",
+      "type": "component",
+      "repeatable": false,
+      "component": "contact-section.contact"
+    },
+    "HomeCallToAction": {
+      "displayName": "HomeCallToAction",
+      "type": "component",
+      "repeatable": false,
+      "component": "call-to-action-section.home-call-to-action"
+    },
+    "HomeMainBanner": {
+      "displayName": "MainBanner",
+      "type": "component",
+      "repeatable": false,
+      "component": "main-banner.main-banner"
+    }
+  }
+}

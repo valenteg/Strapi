@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_section_item_section_items",
+  "info": {
+    "displayName": "SectionItem",
+    "icon": "expand"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "Link": {
+      "displayName": "link",
+      "type": "component",
+      "repeatable": false,
+      "component": "link.link"
+    }
+  }
+}
