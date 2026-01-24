@@ -1158,6 +1158,41 @@ export interface ApiHomePageHomePage extends Schema.CollectionType {
   };
 }
 
+export interface ApiPortfolioItemPortfolioItem extends Schema.CollectionType {
+  collectionName: 'portfolio_items';
+  info: {
+    singularName: 'portfolio-item';
+    pluralName: 'portfolio-items';
+    displayName: 'PortfolioItem';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    coverImage: Attribute.Media;
+    images: Attribute.Media;
+    order: Attribute.Integer;
+    description: Attribute.RichText;
+    year: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::portfolio-item.portfolio-item',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::portfolio-item.portfolio-item',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1183,6 +1218,7 @@ declare module '@strapi/types' {
       'api::design-item.design-item': ApiDesignItemDesignItem;
       'api::home.home': ApiHomeHome;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::portfolio-item.portfolio-item': ApiPortfolioItemPortfolioItem;
     }
   }
 }
