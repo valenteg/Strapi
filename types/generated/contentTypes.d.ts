@@ -758,7 +758,7 @@ export interface ApiAboutPageAboutPage extends Schema.CollectionType {
     SecondSection: Attribute.Component<'section-item.section-item'>;
     ThirdSection: Attribute.Component<'section-item.section-item'>;
     FourthSection: Attribute.Component<'section-item.section-item'>;
-    AboutSeparator: Attribute.Component<'call-to-action-section.home-call-to-action'>;
+    AboutSeparator: Attribute.Component<'cta-section.home-call-to-action'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1138,7 +1138,7 @@ export interface ApiHomePageHomePage extends Schema.CollectionType {
   attributes: {
     NavigationCards: Attribute.Component<'card-item.card-item', true>;
     Contact: Attribute.Component<'contact-section.contact'>;
-    HomeCallToAction: Attribute.Component<'call-to-action-section.home-call-to-action'>;
+    cta: Attribute.Component<'cta-section.home-call-to-action'>;
     HomeMainBanner: Attribute.Component<'main-banner.main-banner'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

@@ -36,7 +36,7 @@
     "AboutSeparator": {
       "type": "component",
       "repeatable": false,
-      "component": "call-to-action-section.home-call-to-action"
+      "component": "cta-section.home-call-to-action"
     }
   }
 }
