@@ -2,21 +2,26 @@
   "collectionName": "components_card_item_card_items",
   "info": {
     "displayName": "CardItem",
-    "icon": "apps"
+    "icon": "apps",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "description": {
+      "type": "string"
+    },
+    "href": {
       "type": "string"
     }
   }

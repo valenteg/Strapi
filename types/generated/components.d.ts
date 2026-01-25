@@ -11,7 +11,7 @@ export interface CallToActionSectionHomeCallToAction extends Schema.Component {
     image: Attribute.Media;
     title: Attribute.String;
     description: Attribute.String;
-    callToAction: Attribute.String;
+    link: Attribute.Component<'link.link'>;
   };
 }
 
@@ -20,10 +20,12 @@ export interface CardItemCardItem extends Schema.Component {
   info: {
     displayName: 'CardItem';
     icon: 'apps';
+    description: '';
   };
   attributes: {
     image: Attribute.Media;
     description: Attribute.String;
+    href: Attribute.String;
   };
 }
 
@@ -75,11 +77,12 @@ export interface MainBannerMainBanner extends Schema.Component {
   collectionName: 'components_main_banner_main_banners';
   info: {
     displayName: 'MainBanner';
+    description: '';
   };
   attributes: {
     image: Attribute.Media;
     title: Attribute.RichText;
-    callToAction: Attribute.String;
+    link: Attribute.Component<'link.link', true>;
   };
 }
 

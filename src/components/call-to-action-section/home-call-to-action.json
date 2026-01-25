@@ -24,8 +24,10 @@
     "description": {
       "type": "string"
     },
-    "callToAction": {
-      "type": "string"
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "link.link"
     }
   }
 }
