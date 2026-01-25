@@ -48,7 +48,7 @@ export interface ContactSectionContact extends Schema.Component {
 }
 
 export interface CtaSectionHomeCallToAction extends Schema.Component {
-  collectionName: 'components_call_to_action_section_home_call_to_actions';
+  collectionName: 'components_cta_section_ctas';
   info: {
     displayName: 'CTA-section';
     icon: 'check';
