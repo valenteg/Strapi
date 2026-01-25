@@ -66,10 +66,11 @@ export interface LinkLink extends Schema.Component {
   collectionName: 'components_link_links';
   info: {
     displayName: 'link';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
-    src: Attribute.String;
+    href: Attribute.String;
   };
 }
 
@@ -82,7 +83,7 @@ export interface MainBannerMainBanner extends Schema.Component {
   attributes: {
     image: Attribute.Media;
     title: Attribute.RichText;
-    link: Attribute.Component<'link.link', true>;
+    link: Attribute.Component<'link.link'>;
   };
 }
 
@@ -91,12 +92,13 @@ export interface SectionItemSectionItem extends Schema.Component {
   info: {
     displayName: 'SectionItem';
     icon: 'expand';
+    description: '';
   };
   attributes: {
     image: Attribute.Media;
     title: Attribute.String;
-    description: Attribute.Text;
-    Link: Attribute.Component<'link.link'>;
+    link: Attribute.Component<'link.link'>;
+    description: Attribute.RichText;
   };
 }
 

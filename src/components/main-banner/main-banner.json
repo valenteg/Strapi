@@ -22,7 +22,7 @@
     },
     "link": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "link.link"
     }
   }
