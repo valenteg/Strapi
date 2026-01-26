@@ -11,6 +11,9 @@
     },
     "href": {
       "type": "string"
+    },
+    "download": {
+      "type": "boolean"
     }
   }
 }
