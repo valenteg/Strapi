@@ -2,19 +2,21 @@
   "collectionName": "components_contact_section_contacts",
   "info": {
     "displayName": "Contact",
-    "icon": "earth"
+    "icon": "earth",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "ContactInfo": {
       "displayName": "ContactInfo",

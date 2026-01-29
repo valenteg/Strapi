@@ -32,6 +32,7 @@ export interface ContactInfoContactInfo extends Schema.Component {
     instagram: Attribute.String;
     city: Attribute.String;
     state: Attribute.String;
+    linkInstagram: Attribute.String;
   };
 }
 
@@ -40,6 +41,7 @@ export interface ContactSectionContact extends Schema.Component {
   info: {
     displayName: 'Contact';
     icon: 'earth';
+    description: '';
   };
   attributes: {
     image: Attribute.Media;
